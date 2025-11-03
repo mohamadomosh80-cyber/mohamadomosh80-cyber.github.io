@@ -1,46 +1,213 @@
-<!DOCTYPE html>
-<html lang="ar">
+<!doctype html>
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محمد العمّوش | الموقع الرسمي</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>محمد العمّوش • مبرمج وأمن سيبراني</title>
 
-    <!-- تحسين ظهور الموقع في محركات البحث -->
-    <meta name="description" content="الموقع الرسمي لـ محمد العمّوش | مبرمج ومهتم بالأمن السيبراني والتقنية الحديثة.">
-    <meta name="keywords" content="محمد العمّوش, Mohammad Alomoush, مبرمج, أمن سيبراني, Cyber Security, Jordan, GitHub">
-    <meta name="author" content="Mohammad Alomoush">
-    <meta property="og:title" content="محمد العمّوش | الموقع الشخصي">
-    <meta property="og:description" content="مبرمج ومختص في الأمن السيبراني.">
-    <meta property="og:url" content="https://mohamadomosh80-cyber.github.io/">
-    <meta property="og:type" content="website">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://mohamadomosh80-cyber.github.io/">
+  <!-- SEO -->
+  <meta name="description" content="الموقع الرسمي لـ محمد العمّوش — مبرمج ومتخصص بالأمن السيبراني. تواصل: mohamad.omosh80@gmail.com — +962792528562">
+  <meta name="keywords" content="محمد العمّوش, Mohammad Alomoush, Cyber Security, أمن سيبراني, مبرمج, Jordan">
+  <meta name="author" content="Mohammad Alomoush">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mohamadomosh80-cyber.github.io/">
 
-    <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            text-align: center;
-            padding: 80px 20px;
-        }
-        h1 {
-            color: #58a6ff;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.8;
-        }
-        a {
-            color: #58a6ff;
-            text-decoration: none;
-        }
-    </style>
+  <!-- Open Graph -->
+  <meta property="og:title" content="محمد العمّوش • مبرمج وأمن سيبراني">
+  <meta property="og:description" content="مطور ومختص بالأمن السيبراني — تواصل عبر البريد أو GitHub.">
+  <meta property="og:url" content="https://mohamadomosh80-cyber.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mohamadomosh80-cyber.github.io/profile.jpg">
+
+  <style>
+    :root{
+      --bg:#0b0f13;
+      --card:#0f1720;
+      --accent:#2f7bff;
+      --muted:#9aa6b2;
+      --text:#e6eef6;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+    body{
+      background:linear-gradient(180deg,var(--bg),#071019);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 20px;
+    }
+
+    .card{
+      width:100%;
+      max-width:880px;
+      background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--card));
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(2,6,23,0.7);
+      padding:36px;
+      display:grid;
+      grid-template-columns:220px 1fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    /* Left: avatar */
+    .avatar{
+      width:200px;
+      height:200px;
+      border-radius:16px;
+      overflow:hidden;
+      background:linear-gradient(135deg,var(--glass),transparent);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(255,255,255,0.04);
+      margin:auto;
+    }
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    /* Right: info */
+    h1{
+      margin:0 0 10px 0;
+      font-size:36px;
+      color:var(--accent);
+      letter-spacing:0.4px;
+    }
+    .role{
+      color:var(--muted);
+      margin:0 0 18px 0;
+      font-weight:600;
+    }
+    .bio{
+      color:var(--text);
+      margin:0 0 18px 0;
+      line-height:1.8;
+      font-size:17px;
+    }
+
+    .links{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .btn{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      color:var(--text);
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.03);
+      transition:all .18s ease;
+    }
+    .btn:hover{transform:translateY(-3px)}
+    .btn-primary{
+      background:linear-gradient(90deg,var(--accent),#5fb0ff);
+      color:#041026;
+      border:none;
+      box-shadow:0 6px 18px rgba(47,123,255,0.12);
+    }
+
+    .contact{
+      margin-top:16px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .contact a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    footer{
+      grid-column:1/-1;
+      margin-top:18px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Responsive */
+    @media (max-width:760px){
+      .card{grid-template-columns:1fr; padding:26px}
+      .avatar{width:140px;height:140px;border-radius:12px;margin:0 auto 6px}
+      h1{font-size:30px;text-align:center}
+      .role,.bio{text-align:center}
+      .links{justify-content:center}
+      footer{text-align:center}
+    }
+  </style>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"محمد العمّوش",
+    "alternateName":"Mohammad Alomoush",
+    "jobTitle":"Cyber Security Specialist",
+    "url":"https://mohamadomosh80-cyber.github.io/",
+    "sameAs":[
+      "https://github.com/mohamadomosh80-cyber"
+    ],
+    "email":"mailto:mohamad.omosh80@gmail.com",
+    "telephone":"+962792528562"
+  }
+  </script>
 </head>
 <body>
-    <h1>محمد العمّوش</h1>
-    <p>مبرمج ومهتم بالأمن السيبراني والتقنية الحديثة 💻🔒</p>
-    <p>يمكنك التواصل معي عبر البريد: <a href="mailto:mohamad.omosh80@gmail.com">mohamad.omosh80@gmail.com</a></p>
-    <p>أو زيارة صفحتي على GitHub: <a href="https://github.com/mohamadomosh80-cyber" target="_blank">mohamadomosh80-cyber</a></p>
+  <main class="card" role="main">
+    <div class="avatar" aria-hidden="true">
+      <!-- اسم ملف الصورة profile.jpg — ارفعه لجذر المستودع لعرضها -->
+      <img src="profile.jpg" alt="صورة محمد العمّوش" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'400\\' height=\\'400\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'%230b1220\\'/><text x=\\'50%\\' y=\\'50%\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' fill=\\'%236b7280\\' font-size=\\'18\\'>صورة غير متوفرة</text></svg>';">
+    </div>
+
+    <section>
+      <h1>محمد العمّوش</h1>
+      <div class="role">مبرمج ومهتم بالأمن السيبراني 🔒💻</div>
+      <p class="bio">مختص بمجال الأمن السيبراني وتطوير واجهات ويب عملية. خبرة في حلول الحماية، فحص الاختراق، وتطبيق ممارسات أمان حديثة. أعمل على مشاريع شخصية ومساهمات في GitHub.</p>
+
+      <div class="links">
+        <a class="btn btn-primary" href="mailto:mohamad.omosh80@gmail.com" title="أرسل بريد" aria-label="إرسال بريد">
+          ✉️ تواصل بالبريد
+        </a>
+
+        <a class="btn" href="tel:+962792528562" title="اتصال" aria-label="اتصال">
+          📞 +962 79 252 8562
+        </a>
+
+        <a class="btn" href="https://github.com/mohamadomosh80-cyber" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+          🧩 GitHub
+        </a>
+      </div>
+
+      <div class="contact" style="margin-top:14px">
+        <div>البريد: <a href="mailto:mohamad.omosh80@gmail.com">mohamad.omosh80@gmail.com</a></div>
+        <div>الهاتف: <a href="tel:+962792528562">+962792528562</a></div>
+      </div>
+    </section>
+
+    <footer>
+      النسخة الرسمية — Mohamad Alomoush · © <span id="yr"></span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
